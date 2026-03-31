@@ -137,6 +137,7 @@ a.top-bar,
     text-decoration: none;
     box-sizing: border-box;
 }
+
 a.top-bar:hover {
     background-color: #a03565;
 }
@@ -285,7 +286,8 @@ a.top-bar:hover {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: flex-end; /* Alterado para grudar o conteudo no fundo da section */
+    align-items: flex-end;
+    /* Alterado para grudar o conteudo no fundo da section */
     padding-top: 15vh;
     /* Distância cravada no maximo de 60px do fundo/promo-bar no desktop */
     padding-bottom: 60px;
@@ -417,15 +419,17 @@ a.top-bar:hover {
 
 .writing-image {
     position: absolute;
-    right: 0;
-    top: -30px;
-    margin: 0;
+    right: 0%;
+    top: -15%;
+    margin-top: -15px;
+    /* Ajuste final: exatamente 15px */
     width: 45%;
     z-index: 2;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    /* Mantém a img pendendo ali no fim da ampla caixa */
     pointer-events: none;
+    /* Imagem fica como layer visual isolada para cliques passarem até ela */
 }
 
 .writing-image img {
@@ -518,20 +522,25 @@ a.top-bar:hover {
 .video-frame {
     border: 3px solid #e1c888;
     padding: 5px;
-    border-radius: 8px; /* Leve detalhe */
+    border-radius: 8px;
+    /* Leve detalhe */
     position: relative;
     background-color: #000;
 }
+
 /* Imagens decorativas PNG aplicadas à moldura em substituição aos cantos CSS */
 .video-decor {
     position: absolute;
-    width: 80px; /* Tamanho ajustado da firula da chavezinha */
+    width: 80px;
+    /* Tamanho ajustado da firula da chavezinha */
     z-index: 10;
 }
+
 .decor-tr {
     top: -20px;
     right: -20px;
 }
+
 .decor-bl {
     bottom: -20px;
     left: -20px;
@@ -556,7 +565,8 @@ a.top-bar:hover {
 }
 
 .key-separator img {
-    width: 216px; /* 100% maior que o baseline anterior */
+    width: 216px;
+    /* 100% maior que o baseline anterior */
     margin-top: 30px;
 }
 
@@ -654,7 +664,7 @@ a.top-bar:hover {
 
 /* Preco original tachado com 100% de aumento do tamanho recem-colocado (0.5rem -> 1rem, ou seja, 50% da original 2rem) */
 .plan-original-price {
-    font-size: 1rem;   
+    font-size: 1rem;
     font-weight: bold;
     color: var(--color-magenta);
     font-family: var(--body-font);
@@ -665,7 +675,8 @@ a.top-bar:hover {
 
 /* Subtexto "Por mes" */
 .plan-per-month {
-    font-size: 0.5rem;   /* 25% do tamanho de 2rem = 0.5rem */
+    font-size: 0.5rem;
+    /* 25% do tamanho de 2rem = 0.5rem */
     font-weight: bold;
     color: var(--color-magenta);
     font-family: var(--body-font);
@@ -753,9 +764,11 @@ a.top-bar:hover {
 }
 
 .title-key {
-    width: 216px; /* Aumentado em 100% frente aos 108px anteriores */
+    width: 216px;
+    /* Aumentado em 100% frente aos 108px anteriores */
     vertical-align: middle;
-    margin: 0 -30px; /* Margem negativa para compensar o esticamento e manter as palavras intactas ao redor */
+    margin: 0 -30px;
+    /* Margem negativa para compensar o esticamento e manter as palavras intactas ao redor */
 }
 
 .about-text {
@@ -776,8 +789,10 @@ a.top-bar:hover {
     border: 2px solid var(--color-beige);
     padding: 5px;
     background-color: #000;
-    width: 75%; /* Redução solicitada de 25% de tamanho */
-    margin-left: auto; /* Mantém encostado na direita conforme arte vetorial */
+    width: 75%;
+    /* Redução solicitada de 25% de tamanho */
+    margin-left: auto;
+    /* Mantém encostado na direita conforme arte vetorial */
 }
 
 .about-image-frame img:not(.about-frame-decor) {
@@ -817,7 +832,8 @@ a.top-bar:hover {
 }
 
 .leaf-separator.dark img {
-    width: 200px; /* Aumentado em mais 100% frente aos 100px originais */
+    width: 200px;
+    /* Aumentado em mais 100% frente aos 100px originais */
 }
 
 /* GARANTIA */
@@ -975,7 +991,8 @@ a.top-bar:hover {
 }
 
 .social-icon {
-    width: 48px; /* Aumentado em ~90% em relação aos 25px antigos */
+    width: 48px;
+    /* Aumentado em ~90% em relação aos 25px antigos */
     height: 48px;
     margin-right: 15px;
     transition: transform 0.3s;
@@ -1085,6 +1102,10 @@ a.top-bar:hover {
         grid-template-columns: 1fr;
     }
 
+    .card-img-wrap {
+        margin-top: 30px;
+    }
+
     .video-title span {
         font-size: 2.5rem;
     }
@@ -1095,18 +1116,18 @@ a.top-bar:hover {
     }
 
     /* Resolução dos feedbacks Mobile */
-    
+
     .hero-btn {
         width: 35vw;
         max-width: 200px;
         padding: 0;
         aspect-ratio: 16 / 5;
-        
+
         display: flex;
         align-items: center;
         justify-content: center;
         white-space: nowrap;
-        
+
         /* O tamanho da fonte cresce com a tela mas fica limitado a um mínimo e máximo (0.8rem a 1.2rem) */
         font-size: clamp(0.8rem, 3.64vw, 1.2rem);
         border-radius: clamp(15px, 5.6vw, 30px);
@@ -1117,7 +1138,8 @@ a.top-bar:hover {
     }
 
     .video-section .key-separator img {
-        width: 172.8px; /* 20% menor que o desktop (216px * 0.8) */
+        width: 172.8px;
+        /* 20% menor que o desktop (216px * 0.8) */
         margin-top: 20px;
         margin-bottom: 20px;
     }
