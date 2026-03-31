@@ -421,8 +421,8 @@ a.top-bar:hover {
     position: absolute;
     right: 0%;
     top: -15%;
-    margin-top: -15px;
-    /* Ajuste final: exatamente 15px */
+    margin-top: -75px;
+    /* Web/Desktop: Subiu mais 20px (antigos -55px) */
     width: 45%;
     z-index: 2;
     display: flex;
@@ -1081,6 +1081,10 @@ a.top-bar:hover {
     .writing-title,
     .writing-desc {
         text-align: left;
+    }
+
+    .writing-image {
+        margin-top: -5px; /* Mobile: Desceu 10px usando como base os -15px originais */
     }
 
     .about-image-wrapper {
